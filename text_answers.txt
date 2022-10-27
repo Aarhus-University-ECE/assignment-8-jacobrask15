@@ -1,0 +1,6 @@
+https://github.com/Aarhus-University-ECE/assignment-8-jacobrask15.git
+
+1a: 10
+
+1b: n*2
+
