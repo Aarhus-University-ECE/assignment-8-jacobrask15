@@ -23,24 +23,27 @@ int main(int argc, char **argv)
     queue *test_queue = (queue *)malloc(sizeof(queue));
     init_queue(test_queue);
     int aa = empty(test_queue);
-    printf("\nSkal være 1:    %d", aa);
+    printf("\nTjekker om queue er empty efter init, skal være 1:    %d", aa);
 
     enqueue(test_queue, -5);
     enqueue(test_queue, 10);
     enqueue(test_queue, 0);
-    printf("\nFront skal være -5:    %d", test_queue->front->data);
-    printf("\nRear skal være 0:    %d", test_queue->rear->data);
+    enqueue(test_queue, 5);
+
+    // printf("\nFront skal være -5:    %d", test_queue->front->data);
+    // printf("\nRear skal være 0:    %d", test_queue->rear->data);
+
     int x = dequeue(test_queue);
-    printf("\nFront skal være 10:    %d", test_queue->front->data);
     int y = dequeue(test_queue);
     int z = dequeue(test_queue);
-    printf("\nSkal være -5:    %d", x);
-    printf("\nkal være 10:    %d", y);
-    printf("\nkal være 0:    %d", z);
-    printf("\nkal være 0:    %d", test_queue->size);
+    int k = dequeue(test_queue);
 
-    int a = empty(test_queue);
-    printf("\nSkal være 1:    %d", a);
+    printf("\nSkal være -5:    %d", x);
+    printf("\nskal være 10:    %d", y);
+    printf("\nSkal være 0:    %d", z);
+    printf("\nSkal være 5:    %d", k);
+
+    printf("\nTester queue size, så forventet er 0:    %d", test_queue->size);
 
     return 0;
 }

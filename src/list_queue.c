@@ -38,7 +38,6 @@ void enqueue(queue *q, int x)
     q->rear = new_node;
     q->front = new_node;
   }
-
   else
   {
     q->rear->next = new_node; /*linsk new_node to list*/
